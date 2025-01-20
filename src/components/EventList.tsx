@@ -9,7 +9,7 @@ export default function EventList({ events }: EventListProps) {
     <div>
       {events.map((event) => (
         <div key={event.id}>
-          <p>{event.type} by {event.actor.login} at {new Date(event.created_at).toString()}</p>
+          <p>{event.type} by {event.actor.login} at {new Date(event.created_at).toLocaleString()}</p>
         </div>
       ))}
     </div>
