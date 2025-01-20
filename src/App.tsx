@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { fetchRepositoryEvents } from './services/api'
-import SearchForm from './components/searchForm'
+import SearchForm from './components/SearchForm'
 import { EventType, GithubEvent } from './types/types'
+import EventList from './components/EventList'
 
 
 
@@ -25,11 +26,7 @@ function App() {
       <SearchForm onSearch={ handleSearch } />
 
       <div>
-        {events.map((event) => (
-          <div key={event.id}>
-            <p>{event.type} by {event.actor.login} in {event.repo.name}</p>
-          </div>
-        ))}
+        <EventList events={events} />
       </div>
     </>
   )
