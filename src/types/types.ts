@@ -6,7 +6,7 @@ export type EventType =
   | 'DeleteEvent'
   | 'All';
 
-export interface Event {
+export interface GithubEvent {
   id: string;
   type: EventType;
   actor: {
