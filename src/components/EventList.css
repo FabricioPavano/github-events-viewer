@@ -1,0 +1,25 @@
+.event-list {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.event-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.timestamp {
+    color: #666;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
