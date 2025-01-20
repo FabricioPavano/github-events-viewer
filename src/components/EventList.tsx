@@ -27,8 +27,13 @@ export default function EventList({ events }: EventListProps) {
       {events.map((event) => (
         <div key={event.id} className="event-item">
           <img src={event.actor.avatar_url} alt="" className="avatar" />
-          <strong>{event.actor.login + ' '} </strong>
-          {getEventDescription(event)}
+          <a 
+            href={`https://github.com/${event.actor.login}`} 
+            target="_blank"
+          >
+            <strong>{event.actor.login}</strong>
+          </a>
+          {' '}{getEventDescription(event)}
           <div className="timestamp">
             on {event.repo.name} at {new Date(event.created_at).toLocaleString()}
           </div>
